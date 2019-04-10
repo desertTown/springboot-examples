@@ -9,10 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Api(value = "后台管理", tags = "Administrator - 后台主入口")
 @RequestMapping("/user")
@@ -33,6 +30,11 @@ public class LoginController {
         } else {
             return ResultVOUtil.fail("login fail");
         }
+    }
+
+    @GetMapping("check")
+    public ResultVO checkHealth() {
+        return ResultVOUtil.success("good health!!");
     }
 
 }
