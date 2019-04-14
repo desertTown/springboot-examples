@@ -1,0 +1,17 @@
+
+info:
+  app:
+    name: springboot-actiator
+    verison: 0.0.1
+    test: test
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
