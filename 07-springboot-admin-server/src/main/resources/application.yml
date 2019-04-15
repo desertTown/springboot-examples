@@ -1,0 +1,37 @@
+
+# \u63CF\u8FF0\u4FE1\u606F
+info:
+  blog-url: www.baidu.com
+  author: evan
+# \u5982\u679C Maven \u63D2\u4EF6\u6CA1\u914D\u7F6E\u6B64\u5904\u8BF7\u6CE8\u91CA\u6389
+  version: @project.version@
+  name: @project.artifactId@
+
+
+# \u65E5\u5FD7\u6587\u4EF6
+logging:
+  file: ./target/admin-server.log
+
+# \u52A0\u8F7D\u6240\u6709\u7684\u7AEF\u70B9/\u9ED8\u8BA4\u53EA\u52A0\u8F7D\u4E86 info / health
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      # \u6BD4\u8F83\u91CD\u8981,\u9ED8\u8BA4 /actuator spring-boot-admin \u626B\u63CF\u4E0D\u5230
+      base-path: /
+  endpoint:
+    health:
+      show-details: always
+
+# \u9009\u62E9\u6FC0\u6D3B\u5BF9\u5E94\u73AF\u5883\u7684\u914D\u7F6E\uFF0C\u5982\u679C\u662Fdev\u5219\u4EE3\u8868\u4E0D\u7528\u8BA4\u8BC1\u5C31\u80FD\u8BBF\u95EE\u76D1\u63A7\u9875\uFF0Cprod\u4EE3\u8868\u9700\u8981\u8BA4\u8BC1
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+        instance:
+        # \u4E0D\u914D\u7F6E\u8001\u559C\u6B22\u7528\u4E3B\u673A\u540D\uFF0C\u770B\u7740\u4E0D\u8212\u670D....
+          prefer-ip: true
+  profiles:
+    active: prod
