@@ -61,7 +61,7 @@ public class LoginFilter implements Filter {
 
         if(userDTO==null) {
             // 跳转到zuul 接口
-            response.sendRedirect("http://localhost:8080/user/index");
+            response.sendRedirect("http://localhost:9998/user/index");
             return;
         }
 

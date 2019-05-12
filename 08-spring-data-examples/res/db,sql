@@ -1,0 +1,12 @@
+CREATE TABLE `person` (
+  `p_id` INT NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `p_name` VARCHAR(45) NULL COMMENT '姓名',
+  `p_age` INT NULL COMMENT '年龄',
+  PRIMARY KEY (`p_id`))
+ENGINE = INNODB
+COMMENT = '人员信息表';
+
+INSERT INTO `springboot1`.`person` (`p_id`, `p_name`, `p_age`) VALUES ('1', '张三', '20');
+INSERT INTO `springboot1`.`person` (`p_id`, `p_name`, `p_age`) VALUES ('2', '李四', '25');
+INSERT INTO `springboot1`.`person` (`p_id`, `p_name`, `p_age`) VALUES ('3', '王五', '18');
+INSERT INTO `springboot1`.`person` (`p_id`, `p_name`, `p_age`) VALUES ('4', '王五', '18');

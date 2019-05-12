@@ -13,6 +13,6 @@ public class LoginBean {
     @ApiModelProperty(value = "用户登录密码", name = "loginPwd", required = true, example = "123456")
     private String password;//   密码
     @ApiModelProperty(hidden = true)
-    private String salt;//   盐值
+    private String salary;
 
 }

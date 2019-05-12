@@ -15,3 +15,5 @@ management:
       show-details: always
     shutdown:
       enabled: true
+server:
+  port: 9997
