@@ -6,7 +6,22 @@ CREATE TABLE `person` (
 ENGINE = INNODB
 COMMENT = '人员信息表';
 
-INSERT INTO `springboot1`.`person` (`p_id`, `p_name`, `p_age`) VALUES ('1', '张三', '20');
-INSERT INTO `springboot1`.`person` (`p_id`, `p_name`, `p_age`) VALUES ('2', '李四', '25');
-INSERT INTO `springboot1`.`person` (`p_id`, `p_name`, `p_age`) VALUES ('3', '王五', '18');
-INSERT INTO `springboot1`.`person` (`p_id`, `p_name`, `p_age`) VALUES ('4', '王五', '18');
+INSERT INTO `person` (`p_id`, `p_name`, `p_age`) VALUES ('1', '张三', '20');
+INSERT INTO `person` (`p_id`, `p_name`, `p_age`) VALUES ('2', '李四', '25');
+INSERT INTO `person` (`p_id`, `p_name`, `p_age`) VALUES ('3', '王五', '18');
+INSERT INTO `person` (`p_id`, `p_name`, `p_age`) VALUES ('4', '王五', '18');
+
+
+
+CREATE TABLE `teacher` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `name` VARCHAR(45) NULL COMMENT '姓名',
+  `age` INT NULL COMMENT '年龄',
+  PRIMARY KEY (`id`))
+ENGINE = INNODB
+COMMENT = '人员信息表';
+
+INSERT INTO `teacher` (`id`, `name`, `age`) VALUES ('1', '张三', '20');
+INSERT INTO `teacher` (`id`, `name`, `age`) VALUES ('2', '李四', '25');
+INSERT INTO `teacher` (`id`, `name`, `age`) VALUES ('3', '王五', '18');
+INSERT INTO `teacher` (`id`, `name`, `age`) VALUES ('4', '赵六', '18');

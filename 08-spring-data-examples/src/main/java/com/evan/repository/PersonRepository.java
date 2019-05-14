@@ -58,7 +58,7 @@ public interface PersonRepository extends JpaRepository<Person, Integer> {
     List<Person> findByPNameNotLike(String PName);
 
     //OrderBy --- 等价于 SQL 中的 "order by"；
-    // TODO 这个有点问题
+    // TODO 这个有点问题,  发现应该是字段的问题， 在TeacherRepository中那样定义的字段不会报错
 //    List<Person> findByPNameNotNullOrderByPAgeAsc();
 
     //Not --- 等价于 SQL 中的 "！ ="；

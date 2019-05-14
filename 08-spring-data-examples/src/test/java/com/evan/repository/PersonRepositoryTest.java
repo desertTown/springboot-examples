@@ -133,6 +133,10 @@ public class PersonRepositoryTest {
         String name = "王五";
         //排序
         Sort sort = new Sort(Sort.Direction.DESC, "pId");
+
+        // 多列排序
+//        Sort sort = new Sort(Sort.Direction.DESC, "pId").and(new Sort(Sort.Direction.ASC, "pAge"));
+
         //查询第二页，按一页三行分页
         Pageable pageable = new PageRequest(1, 3, sort);
 

@@ -11,7 +11,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Table(name = "person")
-//@Data
+@Data
 @ToString
 public class Person {
     @Id
@@ -25,27 +25,4 @@ public class Person {
     @Column(name = "p_age")
     private Integer pAge;
 
-    public Integer getpId() {
-        return pId;
-    }
-
-    public void setpId(Integer pId) {
-        this.pId = pId;
-    }
-
-    public String getpName() {
-        return pName;
-    }
-
-    public void setpName(String pName) {
-        this.pName = pName;
-    }
-
-    public Integer getpAge() {
-        return pAge;
-    }
-
-    public void setpAge(Integer pAge) {
-        this.pAge = pAge;
-    }
 }
